@@ -63,16 +63,18 @@ public abstract class Innlegg {
 	
 	public boolean erLik(Innlegg innlegg) {
 		
-		if (Innlegg = 5) {
-			
+		if (id == innlegg.getId()) {
+			return true;
+		}
+		else {
+			return false;
 		}
 
 	}
 	
 	@Override
 	public String toString() {
-		String person = id +"\n"+ bruker +"\n"+ dato +"\n"+ likes;
-		return person;
+	    return id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n";
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
