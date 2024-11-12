@@ -21,7 +21,6 @@ public class Blogg {
 	
 	public Innlegg[] getSamling() {
 		throw new UnsupportedOperationException(TODO.method());
-
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
