@@ -11,16 +11,19 @@ import no.hvl.dat100.oppgave3.*;
 public class SkrivBlogg {
 	
 	public static boolean skriv(Blogg samling, String mappe, String filnavn) {
+		String plass = mappe + "/" + filnavn;
 
-	 String filbane = mappe + "/" + filnavn;
-	 
-	 try (PrintWriter writer = new PrintWriter(new FileWriter(filbane))){
-		 writer.print(samling.toString());
-		 return true;
-	 } catch(IOException e) {
-		 System.out.println("kunne ikke skrive til fil" + e.getMessage());
-		 return false;
-	 }
+		samling.toString();
+		
+		try (PrintWriter writer = new PrintWriter(new FileWriter(plass))) {
+			writer.print(samling.toString());
+			return true;
+			
+		}
+		catch (IOException e) {
+			System.out.println("Feil" + e.getMessage());
+			return false;
+		}
+		
 	}
 }
-

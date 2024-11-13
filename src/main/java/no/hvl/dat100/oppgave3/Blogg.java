@@ -4,20 +4,23 @@ import no.hvl.dat100.common.TODO;
 import no.hvl.dat100.oppgave1.*;
 
 public class Blogg {
-	private Innlegg[] innleggtabell;
-	private int nesteLedige;
 	
+	private Innlegg [] innleggtabell;
+	private int nesteledig; 
+	
+
 	public Blogg() {
+		innleggtabell = new Innlegg[20];
+		nesteledig = 0;
 	}
 
 	public Blogg(int lengde) {
-		lengde = 20;
 		innleggtabell = new Innlegg[lengde];
-		
+		nesteledig = 0;
 	}
 
 	public int getAntall() {
-		return nesteLedige;
+		return nesteledig;
 	}
 	
 	public Innlegg[] getSamling() {
@@ -25,27 +28,49 @@ public class Blogg {
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
-		innlegg.erLik();
-
-	
+		boolean funnet = false;
+		int verdi = 0;
+	 while ( verdi<nesteledig && !funnet) {
+		if (innleggtabell[verdi].erLik(innlegg)) 
+		 funnet = true;
+		else
+			verdi++;
+	 }
+		if (funnet)
+			return verdi;
+		else 
+			return -1;
 	}
-
+	
 	public boolean finnes(Innlegg innlegg) {
-		throw new UnsupportedOperationException(TODO.method());
+		if (finnInnlegg(innlegg) != -1)
+			return true;
+		else return false;
 	}
 
 	public boolean ledigPlass() {
-		throw new UnsupportedOperationException(TODO.method());
-
+		return nesteledig < innleggtabell.length;
 	}
 	
 	public boolean leggTil(Innlegg innlegg) {
-
-		throw new UnsupportedOperationException(TODO.method());
+		boolean ny = finnInnlegg(innlegg) == -1;
+	if (ny && nesteledig < innleggtabell.length) {
+		innleggtabell[nesteledig] = innlegg;
+		nesteledig++;
+		return true;
+	} else return false;
+			
 	}
-	
+		
+
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method());
+		
+		String tekstbilde = getAntall() + "\n";
+	for (int i = 0; i < getAntall(); i++) {
+	tekstbilde += innleggtabell[i].toString();
+	}
+		
+		return tekstbilde;
 	}
 
 	// valgfrie oppgaver nedenfor
