@@ -4,15 +4,16 @@ import no.hvl.dat100.common.TODO;
 import no.hvl.dat100.oppgave1.*;
 
 public class Blogg {
-
-	// TODO: objektvariable 
-
+	private Innlegg[] innleggtabell;
+	private int nesteLedige;
+	
 	public Blogg() {
-		throw new UnsupportedOperationException(TODO.constructor("Blogg"));
 	}
 
 	public Blogg(int lengde) {
-		throw new UnsupportedOperationException(TODO.constructor("Blogg"));
+		lengde = 20;
+		innleggtabell = new Innlegg[lengde];
+		
 	}
 
 	public int getAntall() {
