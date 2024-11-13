@@ -74,7 +74,7 @@ public abstract class Innlegg {
 	
 	@Override
 	public String toString() {
-	    return id + "\n" + bruker + "\n" + dato + "\n" + likes + "\n";
+	    return getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n";
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
