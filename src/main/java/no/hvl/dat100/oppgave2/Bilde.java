@@ -5,8 +5,6 @@ import no.hvl.dat100.common.TODO;
 public class Bilde extends Tekst {
 	
 	private String url;
-
-	// TODO - objekt variable
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
 		super(id, bruker, dato, tekst);
@@ -31,8 +29,8 @@ public class Bilde extends Tekst {
 
 	@Override
 	public String toString() {
-		System.out.println("TEKST" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + getUrl() + "\n");
-	    return "TEKST" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + getUrl() + "\n";
+		//System.out.println("BILDE" + "\n" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + getUrl() + "\n");
+	    return "BILDE" + "\n" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + getTekst() + "\n" + getUrl() + "\n";
 
 	}
 
