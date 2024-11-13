@@ -33,10 +33,8 @@ public class Tekst extends Innlegg {
 
 	@Override
 	public String toString() {
-	 return "ID: " + getId() + "\n1" + 
-     "Bruker: " + getBruker() + "\nOle Olsen" +
-	 "Dato: " + getDato() + "\n23-10" +
-     "tekst: " + tekst;
+		return "TEKST" + "\n" + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + getTekst() + "\n";
+
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6
