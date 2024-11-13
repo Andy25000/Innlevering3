@@ -7,19 +7,17 @@ public class Tekst extends Innlegg {
 
 	private String tekst;
 	
-	public Tekst () {
-		super(0,"","");
-		this.tekst ="";
-	}
+	
+	
 	
 	public Tekst(int id, String bruker, String dato, String tekst) {
-	super(id,bruker,dato);
-	this.tekst = tekst;
+		super(id,bruker,dato);
+		this.tekst = tekst;
 	}
 	
 	public Tekst(int id, String bruker, String dato, int likes, String tekst) {
-	super (id,bruker,dato);
-	this.tekst = "" ;
+		super (id,bruker,dato, likes);
+		this.tekst = tekst;
 	}
 	public String getTekst() {
 		return tekst;
@@ -27,8 +25,8 @@ public class Tekst extends Innlegg {
 	}
 
 	public void setTekst(String tekst) {
-    this.tekst = tekst;
-	 }
+		this.tekst = tekst;
+	}
 	
 
 	@Override
