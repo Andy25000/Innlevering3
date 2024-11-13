@@ -17,16 +17,17 @@ public class Blogg {
 	}
 
 	public int getAntall() {
-		throw new UnsupportedOperationException(TODO.method());
+		return nesteLedige;
 	}
 	
 	public Innlegg[] getSamling() {
-		throw new UnsupportedOperationException(TODO.method());
+		return innleggtabell;
 	}
 	
 	public int finnInnlegg(Innlegg innlegg) {
+		innlegg.erLik();
 
-		throw new UnsupportedOperationException(TODO.method());
+	
 	}
 
 	public boolean finnes(Innlegg innlegg) {
